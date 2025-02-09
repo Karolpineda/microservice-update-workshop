@@ -6,5 +6,5 @@ COPY . .
 RUN go mod tidy
 RUN go build -o main .
 
-EXPOSE 8097
+EXPOSE 8098
 CMD ["./main"]
