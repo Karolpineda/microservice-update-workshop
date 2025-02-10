@@ -30,6 +30,6 @@ COPY --from=builder /app/main .
 # Copia el archivo env.file (lo renombramos a .env en la imagen final)
 COPY --from=builder /app/env.file .env
  
-EXPOSE 8097
+EXPOSE 8098
  
 CMD ["./main"]
