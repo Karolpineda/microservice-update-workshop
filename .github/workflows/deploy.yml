@@ -35,8 +35,8 @@ jobs:
             docker pull karolpineda/microservice-update-workshop:latest
 
             # 2) Detener y eliminar contenedor previo
-            docker stop workshop_container || true
-            docker rm workshop_container || true
+            docker stop update_workshop_container || true
+            docker rm update_workshop_container || true
 
             # 3) Crear archivo .env con las credenciales de la base de datos
             echo "DB_HOST=${{ secrets.DB_HOST }}" > .env
@@ -47,7 +47,7 @@ jobs:
             echo "PORT=${{ secrets.PORT }}" >> .env
 
             # 4) Ejecutar el contenedor con persistencia de datos
-            docker run -d --name workshop_container \
+            docker run -d --name update_workshop_container \
               --env-file .env \
               -v workshop_data:/data \
               -p 8098:8098 \
