@@ -1,4 +1,4 @@
-module microservicecreateworkshops
+module microserviceupdateworkshops
 
 go 1.22.0
 
